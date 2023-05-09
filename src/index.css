@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.app-container {
+  position: relative;
+  max-width: 100%;
+  min-height: calc(100vh - 2rem);
+  padding: 1rem;
+  background-color: #f3f3fe;
+}
+.header form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.title span {
+  color: #ff7a45;
+}
+.form-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  max-width: 100%;
+  width: 450px;
+}
+.header input {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px -2px #1018280f, 0px 4px 8px -2px #1018281a;
+  outline: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.header input::placeholder {
+  color: #949fae;
+  font-weight: 500;
+}
+.submit-btn {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  background-color: #ff7a45;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.submit-btn:active {
+  transform: scale(0.9);
+}
+.image-list {
+  columns: 250px 4;
+  margin: 0 auto;
+  max-width: 1024px;
+  column-gap: 0.5rem;
+}
+.image-list-img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.pagination {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #949fae;
+}
+.pagination button {
+  padding: 0.75rem 1.25rem;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px -2px #1018280f, 0px 4px 8px -2px #1018281a;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 0.3s;
+}
+.pagination button:hover {
+  transform: scale(1.1);
+}
+.message {
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  background-color: #fef2f2;
+  color: #f87171;
+  border: 1px solid #f87171;
+  font-size: 0.9rem;
+}
+.loading {
+  position: relative;
+  margin: 1.5rem auto 0 auto;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ff7a45;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 500px) {
+  .header form {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .submit-btn {
+    width: 100%;
+  }
+}
